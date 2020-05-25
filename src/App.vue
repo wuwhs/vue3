@@ -1,17 +1,58 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <com-setup />
+    <!-- <com-reactive /> -->
+    <!-- <com-ref /> -->
+    <!-- <com-reactive-ref /> -->
+    <!-- <com-to-ref /> -->
+    <!-- <com-computed /> -->
+    <!-- <com-watch-effect /> -->
+    <!-- <com-watch /> -->
+    <!-- <com-life-cycle-hooks v-if="show" /> -->
+    <!-- <com-grandprent /> -->
+    <!-- <define-component /> -->
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ComSetup from './components/ComSetup.vue'
+// import ComReactive from './components/ComReactive.vue'
+// import ComRef from './components/ComRef.vue'
+// import ComReactiveRef from './components/ComReactiveRef.vue'
+// import ComToRef from './components/ComToRef.vue'
+// import ComComputed from './components/ComComputed.vue'
+// import ComWatchEffect from './components/ComWatchEffect.vue'
+// import ComWatch from './components/ComWatch.vue'
+// import ComLifeCycleHooks from './components/ComLifeCycleHooks.vue'
+// import ComGrandprent from './components/ComGrandparent.vue'
+// import DefineComponent from './components/DefineComponent.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    ComSetup
+    // ComReactive
+    // ComRef
+    // ComReactiveRef,
+    // ComToRef
+    // ComComputed
+    // ComWatchEffect
+    // ComWatch
+    // ComLifeCycleHooks
+    // ComGrandprent
+    // DefineComponent
+  },
+
+  data() {
+    return {
+      show: true
+    }
+  },
+
+  created() {
+    setTimeout(() => {
+      this.show = false
+    }, 2000)
   }
 }
 </script>
