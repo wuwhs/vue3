@@ -26,8 +26,8 @@ export default {
     return {
       state,
       count,
-      text
+      text,
     }
-  }
+  },
 }
 </script>

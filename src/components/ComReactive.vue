@@ -12,7 +12,7 @@
 //       state.count++
 //     })
 //     return { state }
-//   }
+//   },
 // }
 
 import { reactive } from '@vue/composition-api'
@@ -26,6 +26,6 @@ export default {
     }, 1000)
 
     return { state }
-  }
+  },
 }
 </script>

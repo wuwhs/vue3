@@ -1,13 +1,26 @@
 <template>
   <div id="app">
-    <com-setup />
+    <!-- <base-layout>
+      <template v-slot:header="slotProp">
+        <h1>Header</h1>
+        <sub>{{slotProp.user.name}}</sub>
+      </template>
+      <template v-slot:main>
+        <h2>main</h2>
+      </template>
+      <template v-slot:footer>
+        <h3>footer</h3>
+      </template>
+    </base-layout> -->
+
+    <!-- <com-setup /> -->
     <!-- <com-reactive /> -->
     <!-- <com-ref /> -->
     <!-- <com-reactive-ref /> -->
     <!-- <com-to-ref /> -->
     <!-- <com-computed /> -->
     <!-- <com-watch-effect /> -->
-    <!-- <com-watch /> -->
+    <com-watch />
     <!-- <com-life-cycle-hooks v-if="show" /> -->
     <!-- <com-grandprent /> -->
     <!-- <define-component /> -->
@@ -15,14 +28,15 @@
 </template>
 
 <script>
-import ComSetup from './components/ComSetup.vue'
+// import BaseLayout from './components/ComChild'
+// import ComSetup from './components/ComSetup.vue'
 // import ComReactive from './components/ComReactive.vue'
 // import ComRef from './components/ComRef.vue'
 // import ComReactiveRef from './components/ComReactiveRef.vue'
 // import ComToRef from './components/ComToRef.vue'
 // import ComComputed from './components/ComComputed.vue'
 // import ComWatchEffect from './components/ComWatchEffect.vue'
-// import ComWatch from './components/ComWatch.vue'
+import ComWatch from './components/ComWatch.vue'
 // import ComLifeCycleHooks from './components/ComLifeCycleHooks.vue'
 // import ComGrandprent from './components/ComGrandparent.vue'
 // import DefineComponent from './components/DefineComponent.vue'
@@ -30,14 +44,15 @@ import ComSetup from './components/ComSetup.vue'
 export default {
   name: 'App',
   components: {
-    ComSetup
-    // ComReactive
-    // ComRef
+    // BaseLayout,
+    // ComSetup,
+    // ComReactive,
+    // ComRef,
     // ComReactiveRef,
-    // ComToRef
-    // ComComputed
-    // ComWatchEffect
-    // ComWatch
+    // ComToRef,
+    // ComComputed,
+    // ComWatchEffect,
+    ComWatch,
     // ComLifeCycleHooks
     // ComGrandprent
     // DefineComponent
@@ -45,7 +60,7 @@ export default {
 
   data() {
     return {
-      show: true
+      show: true,
     }
   },
 
@@ -53,7 +68,7 @@ export default {
     setTimeout(() => {
       this.show = false
     }, 2000)
-  }
+  },
 }
 </script>
 

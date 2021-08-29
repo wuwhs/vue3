@@ -1,5 +1,5 @@
 <template>
-  <div>count: {{state.count}}
+  <div>count: {{state.count1}}
   </div>
 </template>
 
@@ -14,7 +14,6 @@ export default {
     // state.count++
     // console.log(state.count)
     // console.log(count.value)
-
     const count1 = ref(0)
     const state = reactive({ count1 })
     const count2 = ref(9)
@@ -22,6 +21,7 @@ export default {
     console.log(state.count1)
     console.log(count1.value)
     console.log(count2.value)
-  }
+    return { state }
+  },
 }
 </script>

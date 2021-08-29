@@ -5,15 +5,13 @@
     <button @click="increment">+1</button>
   </div>
 
-  <!--
-  <div>
+  <!-- <div>
     <p>count: {{state.count}}</p>
     <button @click="increment">+1</button>
-  </div>
-   -->
-  <!--
-  <div></div>
-   -->
+  </div> -->
+
+  <!-- <div></div> -->
+
   <!-- <div>
     <input type="text"
       v-model="keyword">
@@ -39,9 +37,9 @@ export default {
     }
     return {
       count,
-      increment
+      increment,
     }
-  }
+  },
 }
 
 // ---------------------------
@@ -52,7 +50,7 @@ export default {
 //   setup() {
 //     // 监视 reactive 数据源
 //     const state = reactive({
-//       count: 0
+//       count: 0,
 //     })
 //     const stop = watch(
 //       () => state.count,
@@ -69,9 +67,9 @@ export default {
 //     }
 //     return {
 //       state,
-//       increment
+//       increment,
 //     }
-//   }
+//   },
 // }
 
 // ---------------------------
@@ -96,7 +94,7 @@ export default {
 //       state.count = 1
 //       state.name = 'ls'
 //     }, 1000)
-//   }
+//   },
 // }
 
 // ---------------------------
@@ -133,10 +131,10 @@ export default {
 // export default {
 //   setup() {
 //     const keyword = ref('')
-//     const asyncPrint = val => {
+//     const asyncPrint = (val) => {
 //       return setTimeout(() => {
 //         console.log('user input: ', val)
-//       })
+//       }, 1000)
 //     }
 
 //     watch(
@@ -146,12 +144,12 @@ export default {
 //         onCleanUp(() => clearTimeout(timer))
 //       },
 //       {
-//         lazy: true
+//         lazy: true,
 //       }
 //     )
 //     return {
-//       keyword
+//       keyword,
 //     }
-//   }
+//   },
 // }
 </script>

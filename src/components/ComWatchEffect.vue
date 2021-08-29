@@ -72,17 +72,17 @@ import { ref, watchEffect } from '@vue/composition-api'
 export default {
   setup() {
     const keyword = ref('')
-    const asyncPrint = val => {
+    const asyncPrint = (val) => {
       return setTimeout(() => {
         console.log('user input: ', val)
       }, 1000)
     }
 
     watchEffect(
-      onInvalidate => {
+      (onInvalidate) => {
         const timer = asyncPrint(keyword.value)
         onInvalidate(() => clearTimeout(timer))
-        console.log('keyword change: ', keyword.value)
+        // console.log('keyword change: ', keyword.value)
       },
       {
         flush: 'post', // 默认'post'，同步'sync'，'pre'组件更新之前
@@ -93,13 +93,13 @@ export default {
         // 依赖变化时触发
         onTrigger(e) {
           console.log('trigger: ', e)
-        }
+        },
       }
     )
 
     return {
-      keyword
+      keyword,
     }
-  }
+  },
 }
 </script>
